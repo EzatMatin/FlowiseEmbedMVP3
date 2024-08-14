@@ -22,7 +22,7 @@ export const StarterPromptBubble = (props: Props) => (
           borderRadius: '8px',
           cursor: 'pointer',
           textAlign: 'center',
-          display: 'inline-block',
+          display: 'inline-block'
         }}
       >
         {props.prompt}
