@@ -1112,12 +1112,12 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                       prompt={key}
                       onPromptClick={() => promptClick(key)}
                       starterPromptFontSize={botProps.starterPromptFontSize} // Pass font size
-                      border-Color={botProps.starterPromptBorderColor} // Pass border color
-                      border-Radius={botProps.starterPromptBorderRadius} // Pass border radius
-                      padding-X={botProps.starterPromptPaddingX} // Pass horizontal padding
-                      padding-Y={botProps.starterPromptPaddingY} // Pass vertical padding
-                      box-Shadow={botProps.starterPromptBoxShadow} // Pass box shadow
-                      background-Color={botProps.starterPromptBackgroundColor} // Pass background color
+                      starterPromptBorderColor={botProps.starterPromptBorderColor} // Pass border color
+                      starterPromptBorderRadius={botProps.starterPromptBorderRadius} // Pass border radius
+                      starterPromptPaddingX={botProps.starterPromptPaddingX} // Pass horizontal padding
+                      starterPromptPaddingY={botProps.starterPromptPaddingY} // Pass vertical padding
+                      starterPromptBoxShadow={botProps.starterPromptBoxShadow} // Pass box shadow
+                      starterPromptBackgroundColor={botProps.starterPromptBackgroundColor} // Pass background color
                     />
                   )}
                 </For>
