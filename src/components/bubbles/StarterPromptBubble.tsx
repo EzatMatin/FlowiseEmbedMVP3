@@ -9,7 +9,7 @@ export const StarterPromptBubble = (props: Props) => (
     <div
       data-modal-target="defaultModal"
       data-modal-toggle="defaultModal"
-      class="flex flex-row flex-wrap px-5 py-[10px] gap-2 justify-center items-center w-full border border-black rounded-[10px] shadow-md animate-fade-in hover:brightness-90 active:brightness-75"
+      class="flex flex-col flex-wrap px-5 py-[10px] gap-2 justify-center items-center w-full border border-black rounded-[10px] shadow-md animate-fade-in hover:brightness-90 active:brightness-75"
       onClick={() => props.onPromptClick?.()}
     >
       <span
