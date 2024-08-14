@@ -113,14 +113,6 @@ export type BotProps = {
   observersConfig?: observersConfigType;
   starterPrompts?: string[];
   starterPromptFontSize?: number;
-
-  // New properties for StarterPromptBubble customization
-  starterPromptBorderColor?: string;
-  starterPromptBorderRadius?: number;
-  starterPromptPaddingX?: number;
-  starterPromptPaddingY?: number;
-  starterPromptBoxShadow?: string;
-  starterPromptBackgroundColor?: string;
 };
 
 export type LeadsConfig = {
@@ -1105,19 +1097,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
           </div>
           <Show when={messages().length === 1}>
             <Show when={starterPrompts().length > 0}>
-              <div class="w-full flex flex-row flex-wrap px-5 py-[10px] gap-2">
+              <div class="w-full flex flex-row flex-wrap px-5 py-[10px] gap-2 justify-center items-center">
                 <For each={[...starterPrompts()]}>
                   {(key) => (
                     <StarterPromptBubble
                       prompt={key}
                       onPromptClick={() => promptClick(key)}
                       starterPromptFontSize={botProps.starterPromptFontSize} // Pass font size
-                      starterPromptBorderColor={botProps.starterPromptBorderColor} // Pass border color
-                      starterPromptBorderRadius={botProps.starterPromptBorderRadius} // Pass border radius
-                      starterPromptPaddingX={botProps.starterPromptPaddingX} // Pass horizontal padding
-                      starterPromptPaddingY={botProps.starterPromptPaddingY} // Pass vertical padding
-                      starterPromptBoxShadow={botProps.starterPromptBoxShadow} // Pass box shadow
-                      starterPromptBackgroundColor={botProps.starterPromptBackgroundColor} // Pass background color
                     />
                   )}
                 </For>
