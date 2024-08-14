@@ -1,28 +1,24 @@
 type Props = {
   prompt: string;
   onPromptClick?: () => void;
+  starterPromptFontSize?: number;
 };
-
 export const StarterPromptBubble = (props: Props) => (
   <>
     <div
       data-modal-target="defaultModal"
       data-modal-toggle="defaultModal"
-      class="flex justify-center items-center animate-fade-in host-container hover:brightness-90 active:brightness-75"
+      class="flex justify-start items-start animate-fade-in host-container hover:brightness-90 active:brightness-75"
       onClick={() => props.onPromptClick?.()}
     >
       <span
-        class="whitespace-pre-wrap max-w-full chatbot-host-bubble"
+        class="px-2 py-1 ml-1 whitespace-pre-wrap max-w-full chatbot-host-bubble"
         data-testid="host-bubble"
         style={{
           width: 'max-content',
-          'font-size': '15px',
-          border: '1px solid #2a2a2a',
-          padding: '5px',
-          'border-radius': '8px',
+          'font-size': props.starterPromptFontSize ? `${props.starterPromptFontSize}px` : '15px', // Convert to string with unit
+          'border-radius': '15px',
           cursor: 'pointer',
-          'text-align': 'center',
-          display: 'inline-block',
         }}
       >
         {props.prompt}
