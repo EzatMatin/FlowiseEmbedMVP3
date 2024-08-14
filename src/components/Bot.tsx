@@ -114,7 +114,6 @@ export type BotProps = {
   starterPrompts?: string[];
   starterPromptFontSize?: number;
 
-
   // New properties for StarterPromptBubble customization
   starterPromptBorderColor?: string;
   starterPromptBorderRadius?: number;
@@ -122,8 +121,6 @@ export type BotProps = {
   starterPromptPaddingY?: number;
   starterPromptBoxShadow?: string;
   starterPromptBackgroundColor?: string;
-
-
 };
 
 export type LeadsConfig = {
@@ -1112,17 +1109,16 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 <For each={[...starterPrompts()]}>
                   {(key) => (
                     <StarterPromptBubble
-                    prompt={key}
-                    onPromptClick={() => promptClick(key)}
-                    starterPromptFontSize={botProps.starterPromptFontSize} // Pass font size
-                    border-Color={botProps.starterPromptBorderColor}                     // Pass border color
-                    border-Radius={botProps.starterPromptBorderRadius}                   // Pass border radius
-                    padding-X={botProps.starterPromptPaddingX}                           // Pass horizontal padding
-                    padding-Y={botProps.starterPromptPaddingY}                           // Pass vertical padding
-                    box-Shadow={botProps.starterPromptBoxShadow}                         // Pass box shadow
-                    background-Color={botProps.starterPromptBackgroundColor}             // Pass background color
-                  />
-                  
+                      prompt={key}
+                      onPromptClick={() => promptClick(key)}
+                      starterPromptFontSize={botProps.starterPromptFontSize} // Pass font size
+                      border-Color={botProps.starterPromptBorderColor} // Pass border color
+                      border-Radius={botProps.starterPromptBorderRadius} // Pass border radius
+                      padding-X={botProps.starterPromptPaddingX} // Pass horizontal padding
+                      padding-Y={botProps.starterPromptPaddingY} // Pass vertical padding
+                      box-Shadow={botProps.starterPromptBoxShadow} // Pass box shadow
+                      background-Color={botProps.starterPromptBackgroundColor} // Pass background color
+                    />
                   )}
                 </For>
               </div>
