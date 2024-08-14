@@ -81,6 +81,12 @@ export type BotProps = {
     observersConfig?: observersConfigType;
     starterPrompts?: string[];
     starterPromptFontSize?: number;
+    starterPromptBorderColor?: string;
+    starterPromptBorderRadius?: number;
+    starterPromptPaddingX?: number;
+    starterPromptPaddingY?: number;
+    starterPromptBoxShadow?: string;
+    starterPromptBackgroundColor?: string;
 };
 export type LeadsConfig = {
     status: boolean;
