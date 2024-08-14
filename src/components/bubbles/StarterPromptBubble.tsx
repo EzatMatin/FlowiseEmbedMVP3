@@ -18,6 +18,7 @@ export const StarterPromptBubble = (props: Props) => (
           width: 'max-content',
           'font-size': props.starterPromptFontSize ? `${props.starterPromptFontSize}px` : '15px', // Convert to string with unit
           'border-radius': '15px',
+          'background-color': '#2a2a2a',
           cursor: 'pointer',
         }}
       >
