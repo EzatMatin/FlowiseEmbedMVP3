@@ -16,13 +16,13 @@ export const StarterPromptBubble = (props: Props) => (
         data-testid="host-bubble"
         style={{
           width: 'max-content',
-          fontSize: '15px',
+          'font-size': '15px',
           border: '1px solid #2a2a2a',
           padding: '5px',
-          borderRadius: '8px',
+          'border-radius': '8px',
           cursor: 'pointer',
-          textAlign: 'center',
-          display: 'inline-block'
+          'text-align': 'center',
+          display: 'inline-block',
         }}
       >
         {props.prompt}
