@@ -9,11 +9,11 @@ export const StarterPromptBubble = (props: Props) => (
     <div
       data-modal-target="defaultModal"
       data-modal-toggle="defaultModal"
-      class="flex flex-row flex-wrap px-5 py-[10px] gap-2 justify-start items-center border border-black rounded-[10px] shadow-md animate-fade-in hover:brightness-90 active:brightness-75"
+      class="flex max-w-3xl flex-wrap items-stretch justify-center gap-4 border border-black rounded-[10px] shadow-md animate-fade-in hover:brightness-90 active:brightness-75"
       onClick={() => props.onPromptClick?.()}
     >
       <span
-        class="ml-1 whitespace-pre-wrap max-w-full chatbot-host-bubble"
+        class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-xxs transition enabled:hover:bg-token-main-surface-secondary disabled:cursor-not-allowed"
         data-testid="host-bubble"
         style={{
           width: 'max-content',
